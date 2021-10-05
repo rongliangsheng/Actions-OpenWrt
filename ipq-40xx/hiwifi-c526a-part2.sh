@@ -53,6 +53,25 @@ CONFIG_PACKAGE_screen=y
 CONFIG_PACKAGE_autocore-arm=y
 EOF
 
+# 添加rt2x00、rt28xx、rt3x7x无线网卡驱动:
+cat >> .config <<EOF
+CONFIG_PACKAGE_kmod-rt2800-lib=y
+CONFIG_PACKAGE_kmod-rt2800-mmio=y
+CONFIG_PACKAGE_kmod-rt2800-soc=y
+CONFIG_PACKAGE_kmod-rt2800-usb=y
+CONFIG_PACKAGE_kmod-rt2x00-lib=y
+CONFIG_PACKAGE_kmod-rt2x00-mmio=y
+CONFIG_PACKAGE_kmod-rt2x00-usb=y
+CONFIG_PACKAGE_kmod-rtl8192c-common=y
+CONFIG_PACKAGE_kmod-rtl8192ce=y
+CONFIG_PACKAGE_kmod-rtl8192cu=y
+CONFIG_PACKAGE_kmod-rtl8192se=y
+CONFIG_PACKAGE_kmod-rtlwifi=y
+CONFIG_PACKAGE_kmod-rtlwifi-pci=y
+CONFIG_PACKAGE_kmod-rtlwifi-usb=y
+
+EOF
+
 # FFmpeg
 cat >> .config <<EOF
 CONFIG_PACKAGE_libopus=y
